@@ -1,0 +1,118 @@
+/* Rough draft styles: just enough to be usable. */
+
+:root {
+  --onyx: #3a3a3a;
+  --pearl: #fdfdfd;
+  --grey: #ccc;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  color: var(--onyx);
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Wraps every screen and centres it horizontally and vertically */
+.app {
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.question-image {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.question-options {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.answer-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 2px solid var(--grey);
+  background: var(--pearl);
+  color: var(--onyx);
+  transition: 300ms ease border;
+}
+
+.answer-option:hover {
+  border: 2px solid var(--onyx);
+  transition: 300ms ease border;
+}
+
+/* 1px thicker border; padding shrinks by 1px so the card doesn't grow */
+.answer-option--selected {
+  border-color: var(--onyx);
+  border-width: 2px;
+  background-color: var(--onyx);
+  color: var(--pearl);
+  transition: 300ms ease border;
+  font-weight: bold;
+}
+
+/* Plain text in the page's top-left corner, no button styling */
+.back-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0;
+  font-weight: bold;
+  border: none;
+  background: none;
+  color: var(--onyx);
+}
+
+/* Button component */
+.button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--onyx);
+  background: var(--onyx);
+  color: var(--pearl);
+  transition: 300ms ease all;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--pearl);
+  color: var(--onyx);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.quiz-next {
+  margin-top: 1rem;
+}
+
+.landing-options,
+.results-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
