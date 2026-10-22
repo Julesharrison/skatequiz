@@ -105,6 +105,21 @@ button {
   cursor: default;
 }
 
+/* "Powered by" + logo in the page's top-right corner */
+.powered-by {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.powered-by img {
+  display: block;
+}
+
 .quiz-next {
   margin-top: 1rem;
 }
