@@ -2,5 +2,5 @@
 export const difficulties = [
   { id: 'beginner', label: 'Beginner' },
   { id: 'intermediate', label: 'Intermediate' },
-  { id: 'expert', label: 'Expert', hidden: true },
+  { id: 'expert', label: 'Expert' },
 ]
